@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main() {
+  // Input: ask user for a number
+  stdout.write("Enter a number: ");
+  int number = int.parse(stdin.readLineSync()!);
+
+  // Output: show the entered number
+  print("You entered: $number");
+
+  // Loop: print numbers from 1 to the entered number
+  print("Numbers from 1 to $number:");
+  for (int i = 1; i <= number; i++) {
+    print(i);
+  }
+}
