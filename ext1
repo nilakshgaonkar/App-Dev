@@ -1,0 +1,42 @@
+// Initial array
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log("Initial Array:", fruits);
+
+// CREATE - Add a new item
+function create(item) {
+  fruits.push(item);
+  console.log("After Create:", fruits);
+}
+
+// READ - Show all items
+function read() {
+  console.log("Read:", fruits);
+}
+
+// UPDATE - Change item at index
+function update(index, newItem) {
+  if (index >= 0 && index < fruits.length) {
+    fruits[index] = newItem;
+    console.log("After Update:", fruits);
+  } else {
+    console.log("Update failed: Index out of range");
+  }
+}
+
+// DELETE - Remove item at index
+function remove(index) {
+  if (index >= 0 && index < fruits.length) {
+    fruits.splice(index, 1);
+    console.log("After Delete:", fruits);
+  } else {
+    console.log("Delete failed: Index out of range");
+  }
+}
+
+// Example usage:
+create("Orange");      // Add Orange
+read();                // Display array
+update(1, "Grapes");   // Change Banana → Grapes
+remove(0);             // Remove first element
+read();                // Final array
